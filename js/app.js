@@ -163,7 +163,7 @@ var body = "Name: " + name + "<br/><br/>Email: " + email + "<br/><br/> Contact N
 
 
 
-// Contacy Form
+// Contact Form
 function IndexContactQuery(event){
     console.log("clicked")
     event.preventDefault()
@@ -203,16 +203,16 @@ var body = "Name: " + name + "<br/><br/>Email: " + email + "<br/><br/> Contact N
    document.getElementById("index_email1").value=""
    document.getElementById("index_mobile1").value=""
     document.getElementById("index_course1").value=""
-    document.getElementById("index_training1").value=""
-    document.getElementById("index_location1").value=""
+    document.getElementById("index_training1").value="Select training type"
+    document.getElementById("index_location1").value="Select Location"
 }).catch(()=>{
     alert("Network Error, So try after some time ")
     document.getElementById("index_name1").value=""
     document.getElementById("index_email1").value=""
     document.getElementById("index_mobile1").value=""
      document.getElementById("index_course1").value=""
-   document.getElementById("index_training1").value=""
-     document.getElementById("index_location1").value=""
+   document.getElementById("index_training1").value="Select training type"
+    document.getElementById("index_location1").value="Select Location"
 })
 }
 
@@ -260,16 +260,16 @@ var body = "Name: " + name + "<br/><br/>Email: " + email + "<br/><br/> Mobile: "
    document.getElementById("index_email3").value=""
    document.getElementById("index_mobile3").value=""
     document.getElementById("index_course3").value=""
-    document.getElementById("index_training3").value=""
-    document.getElementById("index_location3").value=""
+    document.getElementById("index_training3").value="Select Training Type"
+    document.getElementById("index_location3").value="Select Location"
 }).catch(()=>{
     alert("Network Error, So try after some time ")
     document.getElementById("index_name3").value=""
     document.getElementById("index_email3").value=""
     document.getElementById("index_mobile3").value=""
      document.getElementById("index_course3").value=""
-     document.getElementById("index_training3").value=""
-     document.getElementById("index_location3").value=""
+     document.getElementById("index_training3").value="Select Training Type"
+    document.getElementById("index_location3").value="Select Location"
 })
 }
 

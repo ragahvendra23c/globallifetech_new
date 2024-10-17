@@ -455,14 +455,16 @@
                                 Training</strong></h5>
                         <p class="text-center"></p>
 
-                        <form onsubmit="IndexRequestQuery(event)">
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="1d5434e0-cb84-40f1-9a74-da5bcb495e0a">
+
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
                                         <i style="padding: 6px;padding-right: 10px;" class="fa fa-user"></i>
                                     </span>
                                 </div>
-                                <input class="form-control" id="index_name" required placeholder="Full name" type="text"
+                                <input class="form-control" name="Name" id="index_name" required placeholder="Full name" type="text"
                                     style="background-color: white;">
                             </div>
                             <div class="form-group input-group">
@@ -471,7 +473,7 @@
                                             class="fa fa-envelope"></i>
                                     </span>
                                 </div>
-                                <input name="" class="form-control" id="index_email" required
+                                <input name="Email" class="form-control" id="index_email" required
                                     placeholder="Email address" type="email" style="background-color: white;">
                             </div>
                             <div class="form-group input-group">
@@ -482,7 +484,7 @@
                                     </span>
                                 </div>
 
-                                <input name="" class="form-control" id="index_mobile" required
+                                <input name="Mobile" class="form-control" id="index_mobile" required
                                     placeholder="Phone number" type="text" style="background-color: white;">
                             </div>
                             <div class="form-group input-group">
@@ -492,7 +494,7 @@
                                             class="fa fa-building"></i>
                                     </span>
                                 </div>
-                                <input name="" class="form-control" id="index_course" required
+                                <input name="Course" class="form-control" id="index_course" required
                                     placeholder="Enter Course Name" type="text" style="background-color: white;">
                             </div>
                             <br>
@@ -1599,24 +1601,27 @@
             </div>
 
             <div class="col-lg-5 mt-5 mt-lg-0 d-flex align-items-stretch p-3 shadow p-3 mb-5 bg-body-tertiary rounded">
-                <form onsubmit="IndexImpressesQuery(event)" role="form" class="php-email-form">
+                <form  role="form" action="https://api.web3forms.com/submit" method="POST"
+                class="php-email-form">
+                    <input type="hidden" name="access_key" value="1d5434e0-cb84-40f1-9a74-da5bcb495e0a">
+
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label for="name">Your Name</label>
-                            <input type="text" name="name" class="form-control border" id="index_name2" required>
+                            <input type="text" name="Name" class="form-control border" id="index_name2" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="name">Your Mobile</label>
-                            <input type="number" class="form-control border" name="mobile" id="index_mobile2" required>
+                            <input type="number" class="form-control border" name="Mobile" id="index_mobile2" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="name">Your Email</label>
-                        <input type="email" class="form-control border" name="subject" id="index_email2" required>
+                        <input type="email" class="form-control border" name="Email" id="index_email2" required>
                     </div>
                     <div class="form-group">
                         <label for="name">Course Name</label>
-                        <textarea class="form-control border" name="message" rows="10" id="index_course2"
+                        <textarea class="form-control border" name="Course" rows="10" id="index_course2"
                             required></textarea>
                     </div>
                     <!-- <div class="my-3">
@@ -1793,21 +1798,23 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form onsubmit="IndexContactQuery(event)">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="1d5434e0-cb84-40f1-9a74-da5bcb495e0a">
+
                         <input type="hidden" class="title" name="lead" value=''>
                         <div class="col-md-12 mb-2 no-padding">
                             <!-- <label for="validationName">NAME</label> -->
-                            <input type="text" class="form-control" id="index_name1" placeholder="First name" value=""
+                            <input type="text" name="Name" class="form-control" id="index_name1" placeholder="First name" value=""
                                 minlength="4" maxlength="30" required>
                         </div>
                         <div class="col-md-12 mb-2 no-padding">
                             <!-- <label for="validationEmail">EMAIL</label> -->
-                            <input type="email" class="form-control" id="index_email1" placeholder="Email" value=""
-                                name="validationEmail" required>
+                            <input type="email" name="Email" class="form-control" id="index_email1" placeholder="Email" value=""
+                                 required>
                         </div>
                         <div class="col-md-12 mb-2 no-padding">
                             <!-- <label for="validationPhone">Contact Number</label> -->
-                            <input type="phone" class="form-control" id="index_mobile1" name="validationPhone"
+                            <input type="phone" name="Mobile" class="form-control" id="index_mobile1"
                                 placeholder="Conatct Number" value="" required>
                             <!-- pattern="^[6789]\d{9}$" -->
                         </div>
@@ -1815,11 +1822,11 @@
                         <div class="col-md-12 mb-2 no-padding">
                             <!-- <label for="user_msg">Course</label> -->
                             <textarea class="form-control" id="index_course1" rows="2" placeholder="Enter course name"
-                                id="validationMessage" name="validationMessage" required></textarea>
+                                id="validationMessage"  name="Course" required></textarea>
                         </div>
                         <div class="col-md-12 mb-2 no-padding">
 
-                            <select id="index_training1" class="form-control  form-select-sm"
+                            <select id="index_training1" name="Training-type" class="form-control  form-select-sm"
                                 aria-label="Small select example">
                                 <option selected>Select Training Type</option>
                                 <option value="ClassRoom Training">ClassRoom Training</option>
@@ -1831,7 +1838,7 @@
                             <!-- <label for="validationPhone">Contact Number</label> -->
                             <!-- <input type="phone" class="form-control" id="index_location1"
                                 placeholder="Training Location" required> -->
-                                <select id="index_location1" aria-placeholder="Select Location"  class="form-control  form-select-sm" aria-label="Small select example">
+                                <select id="index_location1" name="Location" aria-placeholder="Select Location"  class="form-control  form-select-sm" aria-label="Small select example">
                                     <option selected>Select Location</option>
                                     <option value="Marathahalli - Bengaluru">Marathahalli - Bengaluru</option>
                                     <option value="BTM Layout - Bengaluru">BTM Layout - Bengaluru</option>
@@ -1858,30 +1865,31 @@
             <div class="form">
                 <div class="close">&times;</div>
                 <h5><strong>Request for Classroom & Online Training</strong></h5>
-                <form onsubmit="IndexPopupQuery(event)">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="1d5434e0-cb84-40f1-9a74-da5bcb495e0a">
                     <input type="hidden" class="title" name="lead" value=''>
                     <div class="col-md-12 mb-3 no-padding">
                         <!-- <label for="validationName">NAME</label> -->
-                        <input type="text" class="form-control" id="index_name3" placeholder="First name" required>
+                        <input type="text" class="form-control" name="Name" id="index_name3" placeholder="First name" required>
                     </div>
                     <div class="col-md-12 mb-3 no-padding">
                         <!-- <label for="validationEmail">EMAIL</label> -->
-                        <input type="email" class="form-control" id="index_email3" placeholder="Email" required>
+                        <input type="email" class="form-control" name="Email" id="index_email3" placeholder="Email" required>
                     </div>
                     <div class="col-md-12 mb-3 no-padding">
                         <!-- <label for="validationPhone">Contact Number</label> -->
-                        <input type="phone" class="form-control" id="index_mobile3" placeholder="Conatct Number"
+                        <input type="phone" class="form-control" name="Mobile" id="index_mobile3" placeholder="Conatct Number"
                             required>
 
                     </div>
                     <div class="col-md-12 mb-3 no-padding">
                         <!-- <label for="validationPhone">Contact Number</label> -->
-                        <input type="phone" class="form-control" id="index_course3" placeholder="Course" required>
+                        <input type="phone" class="form-control" name="coyrse" id="index_course3" placeholder="Course" required>
 
                     </div>
                     <div class="col-md-12 mb-3 no-padding">
 
-                        <select id="index_training3" class="form-control  form-select-sm"
+                        <select id="index_training3" name="Training-type" class="form-control  form-select-sm"
                             aria-label="Small select example">
                             <option selected>Select Training Type</option>
                             <option value="ClassRoom Training">ClassRoom Training</option>
@@ -1895,7 +1903,7 @@
                             placeholder="Training Location"required> -->
 
 
-                        <select id="index_location3" aria-placeholder="Select Location"
+                        <select id="index_location3" name="Location" aria-placeholder="Select Location"
                             class="form-control  form-select-sm" aria-label="Small select example">
                             <option selected>Select Location</option>
                             <option value="Marathahalli - Bengaluru">Marathahalli - Bengaluru</option>
